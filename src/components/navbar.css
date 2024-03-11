@@ -1,0 +1,37 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: hsl(280, 87%, 42%);
+    display: grid;
+    place-items: center;
+}
+
+.navbar__icon{
+    color: #fff;
+}
+
+.navbar__container{
+    width: 84%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__menu li a{
+    color: #fff;
+    padding: 0.5rem 1rem;
+}

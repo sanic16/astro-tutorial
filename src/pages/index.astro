@@ -1,0 +1,54 @@
+---
+import Card from '../components/Card.astro'
+import Navbar from '../components/Navbar.jsx'
+import Counter from '../components/Counter.jsx'	
+const data = [
+	{
+		title: 'Análisis de Calidad de Energía',
+		text: 'Análisis de calidad de energía en sistemas eléctricos de potencia.',
+	},
+	{
+		title: 'Automatización de Procesos',
+		text: 'Automatización de procesos industriales y comerciales.',
+	},
+	{
+		title: 'Robótica Industrial',
+		text: 'Diseño y programación de robots industriales.',
+	},
+	{
+		title: 'Diseño Web',
+		text: 'Diseño y desarrollo de sitios web.',
+	}
+]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+		<div class="container">
+			{ data.map(item => (
+				<Card title={item.title} text={item.text} />
+			)) }
+		</div>
+		<Navbar client:load />
+		<Counter client:load/>
+	</body>
+</html>
+
+<style>
+	.container{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-auto-rows: 1fr;
+		gap: 1rem;
+		width: 84%;
+		margin-inline: auto;
+	}
+</style>

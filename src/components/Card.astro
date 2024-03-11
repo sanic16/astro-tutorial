@@ -1,0 +1,26 @@
+---
+const { title, text} = Astro.props
+---
+
+<div>
+    <h1>
+        { title }
+    </h1>
+    <p>
+        { text }
+    </p>
+</div>
+
+<style>
+    h1{
+        font-size: 1.8rem;
+    }
+    div{
+        background-color: hsl(0, 5%, 85%);
+        padding: .6rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    }
+</style>
